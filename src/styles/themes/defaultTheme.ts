@@ -17,6 +17,10 @@ export const defaultTheme = {
   'blue-500': '#5383E8',
   'blue-600': '#4171D6',
   'blue-700': '#2F5EC0',
+
+  'slate-800': '#2F436E',
+  'slate-900': '#28344E',
+
   'gray-100': '#F7F7F9',
   'gray-200': '#ebeef1',
   'gray-250': '#DBE0E4',
@@ -26,7 +30,7 @@ export const defaultTheme = {
   'gray-600': '#57646F',
   'gray-700': '#44515C',
   'gray-800': '#34414D',
-  'gray-900': '#202D37',
+  'gray-900': '#000',
   device: {
     mobileS: `(max-width: ${size.mobileS})`,
     mobileM: `(max-width: ${size.mobileM})`,
@@ -38,5 +42,15 @@ export const defaultTheme = {
     laptopM: `(max-width: ${size.laptopM})`,
     laptopL: `(max-width: ${size.laptopL})`,
     desktop: `(max-width: ${size.desktop})`,
+  },
+
+  fontSize: {
+    xs: '0.5rem',
+    sm: '0.625rem',
+    md: '0.75rem',
+    base: '1rem',
+    lg: '1.125rem',
+    xl: '1.25rem',
+    '2xl': '1.5rem',
   },
 } as const

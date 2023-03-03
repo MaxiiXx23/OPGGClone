@@ -15,4 +15,9 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 1rem;
       -webkit-font-smoothing: antialiased
    }
+
+   input, button {
+      border: 0;
+      box-shadow: none;
+   }
 `
