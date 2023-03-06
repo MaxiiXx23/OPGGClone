@@ -1,3 +1,5 @@
+import * as Menubar from '@radix-ui/react-menubar'
+
 import { FiSun, FiMoon } from 'react-icons/fi'
 import { GiEarthAfricaEurope } from 'react-icons/gi'
 import { RiArrowDownSFill } from 'react-icons/ri'
@@ -27,6 +29,8 @@ import {
   BtnLogIn,
   WrapperNavLink,
 } from './styles'
+
+import { ContentIdioms } from './components/ContentIdioms'
 
 export function Header() {
   return (
@@ -104,9 +108,12 @@ export function Header() {
           <WrapperIconEarth>
             <GiEarthAfricaEurope />
           </WrapperIconEarth>
-          <BtnIdiom>
-            English <RiArrowDownSFill size={16} />
-          </BtnIdiom>
+          <Menubar.Menu>
+            <BtnIdiom>
+              English <RiArrowDownSFill size={16} />
+            </BtnIdiom>
+            <ContentIdioms />
+          </Menubar.Menu>
         </NavOptionModeIdiom>
         <NavOption>
           <BtnLogIn>Log In</BtnLogIn>

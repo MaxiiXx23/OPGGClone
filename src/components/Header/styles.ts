@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
+import * as Menubar from '@radix-ui/react-menubar'
 import { NavLink } from 'react-router-dom'
 
-export const ContainerNav = styled.nav`
+export const ContainerNav = styled(Menubar.Root)`
   width: 100%;
   display: flex;
   align-items: center;
@@ -129,7 +130,7 @@ export const WrapperIconEarth = styled.div`
   color: ${({ theme }) => theme['gray-100']};
 `
 
-export const BtnIdiom = styled.button`
+export const BtnIdiom = styled(Menubar.Trigger)`
   cursor: pointer;
   display: flex;
   align-items: center;
