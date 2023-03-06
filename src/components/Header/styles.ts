@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 export const ContainerNav = styled(Menubar.Root)`
   width: 100%;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,30 +14,24 @@ export const ContainerNav = styled(Menubar.Root)`
 `
 
 export const ContainerImageLogoNavSelected = styled.div`
-  width: 25%;
+  width: 22%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   img {
-    width: 100%;
-    height: 1rem;
+    height: 1.3rem;
   }
 `
 
 export const WrapperNavActived = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row;
   gap: 0.25rem;
-
-  margin-right: 0.5rem;
-
   img {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    padding: 0px;
   }
 
   span {
@@ -48,12 +43,10 @@ export const WrapperNavActived = styled.div`
 
 export const NavList = styled.ul`
   width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
-
-  padding: 0.25rem 0;
 
   background-color: ${({ theme }) => theme['slate-900']};
 
@@ -61,7 +54,6 @@ export const NavList = styled.ul`
 `
 
 export const NavOption = styled.li`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,23 +65,25 @@ interface INavLinkOptionProps {
 }
 
 export const WrapperNavLink = styled.div<INavLinkOptionProps>`
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: ${({ variantPadding }) => (variantPadding ? '0rem' : '0.25rem')}
-    0.25rem;
+    0.5rem;
   border: 0;
   border-radius: 4px;
   &:hover {
     background-color: ${({ theme }) => theme['slate-800']};
   }
+  &:first-child {
+    margin-left: 10px;
+  }
 `
 
 export const NavLinkOption = styled(NavLink)`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-
   gap: 0.25rem;
 
   color: ${({ theme }) => theme['gray-300']};
@@ -105,11 +99,14 @@ export const TextNavOption = styled.span`
 `
 
 export const NavOptionModeIdiom = styled.li`
+  padding-right: 1.5rem;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   gap: 0.75rem;
+  background-color: ${({ theme }) => theme['slate-900']};
 `
 
 export const ButtonMode = styled.button`
@@ -144,17 +141,17 @@ export const BtnIdiom = styled(Menubar.Trigger)`
 `
 
 export const BtnLogIn = styled.button`
-  cursor: pointer;
+  width: 4.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   border: 0;
   border-radius: 4px;
-  padding: 0rem 0.875rem;
 
   background: ${({ theme }) => theme['blue-500']};
 
-  line-height: 1.8;
   color: ${({ theme }) => theme['gray-100']};
+  cursor: pointer;
 `

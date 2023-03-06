@@ -13,6 +13,7 @@ import NavOverwatchIcon from '../../assets/iconsHeader/img-navi-overwatch-gray.s
 import NavEternalIcon from '../../assets/iconsHeader/img-navi-bs.svg'
 import NavEsportsIcon from '../../assets/iconsHeader/img-navi-esports.svg'
 import NavTalkIcon from '../../assets/iconsHeader/img-navi-talk-white.svg'
+import NavDuoIcon from '../../assets/iconsHeader/img-navi-duo-gray.svg'
 
 import {
   ContainerImageLogoNavSelected,
@@ -40,7 +41,7 @@ export function Header() {
         <img src={OPGGLogo} alt="OP.GG-Logo" />
         <WrapperNavActived>
           <img src={NavLolIcon} alt="League of Legends Icon" />
-          <span>League Of League</span>
+          <span>League Of Legends</span>
         </WrapperNavActived>
       </ContainerImageLogoNavSelected>
       {/* Container List Nav */}
@@ -101,24 +102,33 @@ export function Header() {
             </NavLinkOption>
           </WrapperNavLink>
         </NavOption>
-        <NavOptionModeIdiom>
-          <ButtonMode>
-            <FiSun size={18} />
-          </ButtonMode>
-          <WrapperIconEarth>
-            <GiEarthAfricaEurope />
-          </WrapperIconEarth>
-          <Menubar.Menu>
-            <BtnIdiom>
-              English <RiArrowDownSFill size={16} />
-            </BtnIdiom>
-            <ContentIdioms />
-          </Menubar.Menu>
-        </NavOptionModeIdiom>
+        <NavOption>
+          <WrapperNavLink>
+            <NavLinkOption to="/">
+              <img src={NavDuoIcon} alt="Talk Icon" />
+              <TextNavOption>Duo</TextNavOption>
+            </NavLinkOption>
+          </WrapperNavLink>
+        </NavOption>
+      </NavList>
+      <NavOptionModeIdiom>
+        <ButtonMode>
+          <FiSun size={18} />
+        </ButtonMode>
+        <WrapperIconEarth>
+          <GiEarthAfricaEurope />
+        </WrapperIconEarth>
+        <Menubar.Menu>
+          <BtnIdiom>
+            English <RiArrowDownSFill size={16} />
+          </BtnIdiom>
+          <ContentIdioms />
+        </Menubar.Menu>
         <NavOption>
           <BtnLogIn>Log In</BtnLogIn>
         </NavOption>
-      </NavList>
+      </NavOptionModeIdiom>
+
       {/* Container Mode and Language */}
     </ContainerNav>
   )
