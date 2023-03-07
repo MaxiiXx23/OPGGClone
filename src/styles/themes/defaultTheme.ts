@@ -48,6 +48,7 @@ export const defaultTheme = {
     xs: '0.5rem',
     sm: '0.625rem',
     md: '0.75rem',
+    sb: '0.875rem',
     base: '1rem',
     lg: '1.125rem',
     xl: '1.25rem',
