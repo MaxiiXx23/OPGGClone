@@ -158,3 +158,24 @@ export const BtnLogIn = styled.button`
   line-height: 1.8;
   color: ${({ theme }) => theme['gray-100']};
 `
+
+// Nav secundary
+
+export const ContainerNavSecundary = styled.nav`
+  width: 100%;
+  display: flex;
+  background-color: ${({ theme }) => theme['blue-500']};
+`
+
+export const NavListSecundary = styled.ul`
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 0.5rem;
+
+  padding: 1rem 8.25rem 0 8.25rem;
+
+  list-style-type: none;
+`
