@@ -98,7 +98,7 @@ export const TextNavOption = styled.span`
   color: ${({ theme }) => theme['gray-300']};
 `
 
-export const NavOptionModeIdiom = styled.li`
+export const NavOptionModeIdiom = styled.div`
   padding-right: 1.5rem;
   height: 100%;
   display: flex;
@@ -154,4 +154,21 @@ export const BtnLogIn = styled.button`
 
   color: ${({ theme }) => theme['gray-100']};
   cursor: pointer;
+`
+// Nav secundary
+
+export const ContainerNavSecundary = styled.nav`
+  width: 100%;
+  display: flex;
+  background-color: ${({ theme }) => theme['blue-500']};
+`
+
+export const NavListSecundary = styled.ul`
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem 8.25rem 0 8.25rem;
+  list-style-type: none;
 `
