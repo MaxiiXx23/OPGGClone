@@ -30,9 +30,12 @@ import Star from '../../assets/animations/star.json'
 import Attention from '../../assets/animations/attention.json'
 import Imghome from '../../assets/imagesStatics/xayah.webp'
 import IconButton from '../../assets/imagesStatics/iconButton.svg'
+
+import { regions } from '../../database/regions'
 interface IArray {
   name: string
 }
+
 export function Home() {
   const [array, useArray] = useState<IArray[]>([])
 
@@ -56,23 +59,18 @@ export function Home() {
                 <Select.Portal>
                   <SelectContent>
                     <SelectViewport>
-                      <Select.Group>
-                        <SelectItem value="BR">
-                          <Select.ItemText>Brasil</Select.ItemText>
-                        </SelectItem>
-                        <SelectItem value="NA">
-                          <Select.ItemText>Brasil</Select.ItemText>
-                        </SelectItem>
-                        <SelectItem value="EU">
-                          <Select.ItemText>Brasil</Select.ItemText>
-                        </SelectItem>
-                        <SelectItem value="AS">
-                          <Select.ItemText>Brasil</Select.ItemText>
-                        </SelectItem>
-                        <SelectItem value="KU">
-                          <Select.ItemText>Brasil</Select.ItemText>
-                        </SelectItem>
-                      </Select.Group>
+                      {regions.map((region) => {
+                        return (
+                          <SelectItem key={region.id} value={region.region}>
+                            <img
+                              src={region.img}
+                              alt={region.region}
+                              loading="lazy"
+                            />
+                            <Select.ItemText>{region.region}</Select.ItemText>
+                          </SelectItem>
+                        )
+                      })}
                     </SelectViewport>
                   </SelectContent>
                 </Select.Portal>

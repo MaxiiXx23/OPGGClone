@@ -86,21 +86,31 @@ export const SelectContent = styled(Select.Content)`
   font-size: 0.5rem;
 `
 export const SelectItem = styled(Select.Item)`
-  font-size: 1rem;
-  line-height: 1;
+  width: 100%;
+  height: 1.5rem;
+  padding: 0.5rem 1rem;
+
   color: ${({ theme }) => theme['gray-700']};
   border-bottom: 2px solid ${({ theme }) => theme['gray-200']};
   border-radius: 3px;
   display: flex;
   align-items: center;
-  height: 25px;
-  padding: 0.5rem 1rem;
-  position: relative;
-  user-select: none;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-direction: row;
+
+  font-size: 1rem;
+  line-height: 1.2;
+
   cursor: pointer;
   transition: 0.2s;
   &:hover {
     background-color: ${({ theme }) => theme['gray-300']};
+  }
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 `
 export const SelectViewport = styled(Select.Viewport)`
