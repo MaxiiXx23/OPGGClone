@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import * as Select from '@radix-ui/react-select'
 
+import { FaWindows } from 'react-icons/fa'
 import { RiArrowDownSFill } from 'react-icons/ri'
 import {
   ContainerHome,
@@ -24,12 +25,16 @@ import {
   Animation,
   TextDescription,
   ButtonSearch,
+  ContainerCommercial,
+  ButtonDownload,
+  ContentCommercial,
 } from './styles'
 
 import Star from '../../assets/animations/star.json'
 import Attention from '../../assets/animations/attention.json'
 import Imghome from '../../assets/imagesStatics/xayah.webp'
 import IconButton from '../../assets/imagesStatics/iconButton.svg'
+import TipSpace from '../../assets/imagesStatics/tipspace.jpg'
 
 import { regions } from '../../database/regions'
 interface IArray {
@@ -125,6 +130,15 @@ export function Home() {
           </WrapperForm>
         </ContainerMainInput>
       </ContentHome>
+      <ContainerCommercial>
+        <ButtonDownload to="/">
+          <FaWindows size={21} />
+          Download Now
+        </ButtonDownload>
+        <ContentCommercial>
+          <img src={TipSpace} alt="" />
+        </ContentCommercial>
+      </ContainerCommercial>
     </ContainerHome>
   )
 }

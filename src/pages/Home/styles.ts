@@ -2,12 +2,14 @@ import styled from 'styled-components'
 import * as Select from '@radix-ui/react-select'
 import * as Tabs from '@radix-ui/react-tabs'
 import Lottie from 'lottie-react'
+import { NavLink } from 'react-router-dom'
 
 export const ContainerHome = styled.main`
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: ${({ theme }) => theme['blue-500']};
 `
 export const ContentHome = styled.section`
@@ -30,7 +32,6 @@ export const ContainerMainInput = styled.div`
   align-items: center;
   margin-top: 3rem;
   width: 81%;
-  height: 25rem;
 `
 export const WrapperForm = styled.form`
   display: flex;
@@ -117,6 +118,7 @@ export const SelectViewport = styled(Select.Viewport)`
   padding: 1px;
 `
 export const WrapperInput = styled.div`
+  position: relative;
   width: 55%;
 `
 export const InputSearch = styled.input`
@@ -128,7 +130,8 @@ export const InputSearch = styled.input`
   }
 `
 export const TabsRoot = styled(Tabs.Root)`
-  display: flex;
+  position: absolute;
+  display: none;
   flex-direction: column;
   width: 100%;
   border-radius: 8px;
@@ -201,5 +204,42 @@ export const ButtonSearch = styled.button`
   }
   &:hover {
     background-color: ${({ theme }) => theme['gray-200']};
+  }
+`
+export const ContainerCommercial = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`
+export const ButtonDownload = styled(NavLink)`
+  padding-inline: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 10rem;
+  height: 3rem;
+  font-size: ${({ theme }) => theme.fontSize.sb};
+  border-radius: 5px;
+  color: ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme['slate-700']};
+  margin-bottom: 1.5rem;
+`
+export const ContentCommercial = styled.div`
+  padding-block: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 16rem;
+  background: ${({ theme }) => theme.white};
+  overflow: hidden;
+  background-color: center;
+  border-radius: 5px;
+
+  img {
+    width: 37%;
   }
 `

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 export const ContainerFooter = styled.footer`
   width: 100%;
   height: 25rem;
-  padding-block: 3rem;
+  padding-block: 5rem 2rem;
   background: ${({ theme }) => theme['blue-500']};
   display: flex;
   flex-direction: column;
