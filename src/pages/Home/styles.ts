@@ -43,6 +43,7 @@ export const WrapperForm = styled.form`
   border: 0;
 `
 export const WrapperSelect = styled.div`
+  position: relative;
   margin-left: 1rem;
   padding-left: 1rem;
   display: flex;
@@ -72,19 +73,19 @@ export const SelectTrigger = styled(Select.Trigger)`
   color: ${({ theme }) => theme['gray-400']};
   cursor: pointer;
   transition: 0.5s;
-  font-size: 1.2rem;
+  font-size: ${({ theme }) => theme.fontSize.md};
   &:hover {
     background-color: ${({ theme }) => theme['gray-300']};
   }
-   {
-    font-size: 1rem;
-  }
 `
 export const SelectContent = styled(Select.Content)`
+  margin: 2rem 0 0 2.5rem;
+  position: absolute;
   overflow: hidden;
-  width: 15rem;
+  width: 12rem;
   background: ${({ theme }) => theme.white};
   font-size: 0.5rem;
+  border-radius: 4px;
 `
 export const SelectItem = styled(Select.Item)`
   width: 100%;
@@ -93,14 +94,13 @@ export const SelectItem = styled(Select.Item)`
 
   color: ${({ theme }) => theme['gray-700']};
   border-bottom: 2px solid ${({ theme }) => theme['gray-200']};
-  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
   flex-direction: row;
 
-  font-size: 1rem;
+  font-size: ${({ theme }) => theme.fontSize.md};
   line-height: 1.2;
 
   cursor: pointer;
@@ -214,6 +214,7 @@ export const ContainerCommercial = styled.div`
   align-items: center;
 `
 export const ButtonDownload = styled(NavLink)`
+  cursor: pointer;
   padding-inline: 5px;
   text-decoration: none;
   display: flex;

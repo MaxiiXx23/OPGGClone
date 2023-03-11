@@ -131,7 +131,10 @@ export function Home() {
         </ContainerMainInput>
       </ContentHome>
       <ContainerCommercial>
-        <ButtonDownload to="/">
+        <ButtonDownload
+          to="https://op.gg/desktop/?utm_source=opgg&utm_medium=button&utm_campaign=global"
+          target="_blank"
+        >
           <FaWindows size={21} />
           Download Now
         </ButtonDownload>
