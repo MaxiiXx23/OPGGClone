@@ -6,7 +6,6 @@ import { NavLink } from 'react-router-dom'
 
 export const ContainerHome = styled.main`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -242,5 +241,44 @@ export const ContentCommercial = styled.div`
 
   img {
     width: 37%;
+  }
+`
+
+// container informations op.gg Desktop and Tournament
+
+export const ContainerMainInfos = styled.div`
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: row;
+  margin: 3rem 0;
+`
+
+const ContainerInfosBase = styled.div`
+  width: 100%;
+  height: 29.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  border: 0;
+  border-radius: 4px;
+
+  background: #fff;
+`
+
+export const ContainerDesktop = styled(ContainerInfosBase)``
+
+export const HeaderInfo = styled.header`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  strong {
+    font-size: ${({ theme }) => theme.fontSize.sb};
   }
 `
