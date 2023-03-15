@@ -30,8 +30,6 @@ import {
   ButtonDownload,
   ContentCommercial,
   ContainerMainInfos,
-  ContainerDesktop,
-  HeaderInfo,
 } from './styles'
 
 import Star from '../../assets/animations/star.json'
@@ -40,14 +38,8 @@ import Imghome from '../../assets/imagesStatics/xayah.webp'
 import IconButton from '../../assets/imagesStatics/iconButton.svg'
 import TipSpace from '../../assets/imagesStatics/tipspace.jpg'
 
-// Images Infos
-
-import RecommendationsPNG from '../../assets/imagesStatics/opggDesktop/recommendations.png'
-import ChampionsPNG from '../../assets/imagesStatics/opggDesktop/champions.png'
-import MetasPNG from '../../assets/imagesStatics/opggDesktop/metas.png'
-import BetterConveniencePNG from '../../assets/imagesStatics/opggDesktop/BetterConvenience.png'
-
 import { regions } from '../../database/regions'
+import { ContainerInfosDesktop } from './components/ContainerInfosDesktop'
 interface IArray {
   name: string
 }
@@ -156,31 +148,8 @@ export function Home() {
       {/* ContainerMain Op.gg and Tournament */}
 
       <ContainerMainInfos>
-        {/* Container Desktop */}
-        <ContainerDesktop>
-          <HeaderInfo>
-            <strong>Experience the fast speed of OP.GG for Desktop!</strong>
-          </HeaderInfo>
-          {/* Content Infos */}
-          <div>
-            <div>
-              <strong>Real-time Auto Rune Setting</strong>
-              <img src={RecommendationsPNG} alt="" loading="lazy" />
-            </div>
-          </div>
-        </ContainerDesktop>
-        <ContainerDesktop>
-          <header>
-            <strong>Experience the fast speed of OP.GG for Desktop!</strong>
-          </header>
-          {/* Content Infos */}
-          <div>
-            <div>
-              <strong>Real-time Auto Rune Setting</strong>
-              <img src={RecommendationsPNG} alt="" loading="lazy" />
-            </div>
-          </div>
-        </ContainerDesktop>
+        <ContainerInfosDesktop />
+        <ContainerInfosDesktop />
       </ContainerMainInfos>
     </ContainerHome>
   )
