@@ -18,6 +18,7 @@ export const defaultTheme = {
   'blue-600': '#4171D6',
   'blue-700': '#2F5EC0',
 
+  'slate-700': '#202D37',
   'slate-800': '#2F436E',
   'slate-900': '#28344E',
 
@@ -30,7 +31,7 @@ export const defaultTheme = {
   'gray-600': '#57646F',
   'gray-700': '#44515C',
   'gray-800': '#34414D',
-  'gray-900': '#000',
+  'gray-900': '#1C1C21',
   device: {
     mobileS: `(max-width: ${size.mobileS})`,
     mobileM: `(max-width: ${size.mobileM})`,

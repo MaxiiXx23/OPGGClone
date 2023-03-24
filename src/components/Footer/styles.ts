@@ -2,11 +2,9 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const ContainerFooter = styled.footer`
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 25rem;
-  padding-block: 3rem;
+  padding-block: 5rem 2rem;
   background: ${({ theme }) => theme['blue-500']};
   display: flex;
   flex-direction: column;
