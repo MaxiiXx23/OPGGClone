@@ -31,6 +31,8 @@ import {
   ContentCommercial,
   ContainerMainInfos,
 } from './styles'
+import { ContainerInfosDesktop } from './components/ContainerInfosDesktop'
+import { ContainerInfosEsports } from './components/ContainerInfosEsports'
 
 import Star from '../../assets/animations/star.json'
 import Attention from '../../assets/animations/attention.json'
@@ -38,8 +40,14 @@ import Imghome from '../../assets/imagesStatics/xayah.webp'
 import IconButton from '../../assets/imagesStatics/iconButton.svg'
 import TipSpace from '../../assets/imagesStatics/tipspace.jpg'
 
+// Images Infos
+
+import RecommendationsPNG from '../../assets/imagesStatics/opggDesktop/recommendations.png'
+import ChampionsPNG from '../../assets/imagesStatics/opggDesktop/champions.png'
+import MetasPNG from '../../assets/imagesStatics/opggDesktop/metas.png'
+import BetterConveniencePNG from '../../assets/imagesStatics/opggDesktop/BetterConvenience.png'
+
 import { regions } from '../../database/regions'
-import { ContainerInfosDesktop } from './components/ContainerInfosDesktop'
 interface IArray {
   name: string
 }
@@ -148,8 +156,9 @@ export function Home() {
       {/* ContainerMain Op.gg and Tournament */}
 
       <ContainerMainInfos>
+        {/* Container Desktop */}
         <ContainerInfosDesktop />
-        <ContainerInfosDesktop />
+        <ContainerInfosEsports />
       </ContainerMainInfos>
     </ContainerHome>
   )
